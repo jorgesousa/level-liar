@@ -995,7 +995,7 @@ if (window.ResizeObserver) new ResizeObserver(resize).observe(wrap);
 
 /* test & hot-reload hooks */
 window.__levelLiar = {
-  game, LEVELS, input: testIn, get P() { return P; }, get L() { return L; },
+  game, LEVELS, banner, toast: toastS, fx, input: testIn, get P() { return P; }, get L() { return L; },
   step(n) { for (let i = 0; i < n; i++) update(STEP); }, start(i) { startRun(i, 0, 0); }, jump() { pressJump(); }
 };
 try { window.claude?.hot?.snapshot?.(() => ({ level: game.level, deaths: game.deaths, time: game.runTime, mode: game.mode, paused: game.paused })); } catch (e) {}
