@@ -1,7 +1,7 @@
 {
   "name": "level-liar",
   "version": "1.0.0",
-  "description": "A troll platformer for phone browsers. Ten levels, ten promises, every one a lie.",
+  "description": "A troll platformer for phone and desktop browsers. Ten levels, ten promises, every one a lie.",
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8932 --bind 127.0.0.1",

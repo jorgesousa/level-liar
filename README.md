@@ -10,7 +10,7 @@
 
 [![Play now](https://img.shields.io/badge/%E2%96%B6%20play%20now-jorgesousa.github.io%2Flevel--liar-FFD23F?style=for-the-badge&labelColor=0C1045)](https://jorgesousa.github.io/level-liar/)
 
-[![Made for phones](https://img.shields.io/badge/made%20for-phones-3341D8?style=flat-square&labelColor=0C1045)](#made-for-thumbs)
+[![Phone and desktop](https://img.shields.io/badge/plays%20on-phone%20%2B%20desktop-3341D8?style=flat-square&labelColor=0C1045)](#play-anywhere)
 [![One file](https://img.shields.io/badge/one%20file-no%20build%20step-3341D8?style=flat-square&labelColor=0C1045)](index.html)
 [![Every level beatable](https://img.shields.io/badge/every%20level-tested%20beatable-FF4F6D?style=flat-square&labelColor=0C1045)](#test)
 [![MIT](https://img.shields.io/badge/license-MIT-F2EFFF?style=flat-square&labelColor=0C1045)](LICENSE)
@@ -21,7 +21,7 @@
 
 You see a door. The level says *"Just walk to the door."* You walk to the door. The floor disappears.
 
-LEVEL LIAR is a troll platformer that runs in your phone's browser. Every level is named after a promise, and the promise is the trap. Die once and the game owns up: the promise gets crossed out in the corner and the truth appears next to it. Then you try again, a little wiser and a lot less trusting.
+LEVEL LIAR is a troll platformer that runs in your browser, on your phone or your computer. Every level is named after a promise, and the promise is the trap. Die once and the game owns up: the promise gets crossed out in the corner and the truth appears next to it. Then you try again, a little wiser and a lot less trusting.
 
 <div align="center">
 <a href="docs/media/trailer.mp4"><img src="docs/media/poster.jpg" alt="Watch the 20-second trailer" width="560"></a>
@@ -63,11 +63,11 @@ LEVEL LIAR is a troll platformer that runs in your phone's browser. Every level 
 What happens in each level, and how to beat it: [docs/LEVELS.md](docs/LEVELS.md).
 </details>
 
-## Made for thumbs
+## Play anywhere
 
 <img src="docs/media/phone.jpg" alt="LEVEL LIAR on a phone in landscape, with the touch controls" width="720">
 
-Open the link on your phone and play. Turn it sideways for the big stage. Add it to your home screen and it opens full screen, like an app.
+Open the link and play, nothing to install. On a computer, use the keyboard. On a phone, use the touch buttons and turn it sideways for the big stage. Add it to your home screen and it opens full screen, like an app.
 
 | | Phone | Keyboard |
 |---|---|---|
