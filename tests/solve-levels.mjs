@@ -32,6 +32,42 @@ const B = {
  9: [ {hold:{right:1}, until:'P.x+P.w>721'}, {hold:{}, until:'false', max:24}, {jump:1,hold:{left:1}, until:'P.x<=640', max:200}, {hold:{}, until:'P.onGround && P.y<340', max:200},
       {hold:{right:1}, until:'P.x+P.w>=688'}, {jump:1,hold:{right:1}, until:'P.onGround && P.y<250'},
       {hold:{left:1}, until:'P.x<=735'}, {jump:1,hold:{left:1}, until:'P.x<=600'}, {hold:{}, until:'P.onGround && P.y<160'}, {hold:{left:1}, until:'false',max:300} ],
+ // levels 11–20
+ 10: [ {hold:{right:1}, until:'P.x>=335'}, {jump:1,hold:{right:1}, until:'P.onGround && P.x>540'}, {hold:{}, until:'false', max:150},
+       {jump:1,hold:{right:1}, until:'P.onGround && P.y<340'}, {hold:{right:1}, until:'P.x>=665'}, {jump:1,hold:{right:1}, until:'P.onGround && P.y<250'},
+       {hold:{right:1}, until:'P.x>=790'}, {hold:{}, until:'L.doors[0].x - (P.x+P.w) < 50', max:400}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{}, until:'L.doors[1].active', max:900}, {hold:{left:1}, until:'false', max:200} ],
+ 11: [ {hold:{right:1}, until:'P.x>=530'}, {jump:1,hold:{right:1}, until:'P.onGround && P.x>640'}, {hold:{right:1}, until:'P.x>=770'},
+       {jump:1,hold:{right:1}, until:'P.onGround && P.y<200'}, {hold:{}, until:'false', max:60}, {jump:1,hold:{left:1}, until:'false', max:300} ],
+ 12: [ {hold:{right:1}, until:'P.x>=40'}, {jump:1,hold:{right:1}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=260'}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{right:1}, until:'P.x>=520'}, {jump:1,hold:{right:1}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=730'}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{}, until:'false', max:80}, {jump:1,hold:{}, until:'P.onGround'}, {hold:{left:1}, until:'false', max:300} ],
+ 13: [ {hold:{right:1}, until:'P.x>=175'}, {jump:1,hold:{right:1}, until:'P.x>=280'}, {hold:{left:1}, until:'P.onGround'}, {hold:{left:1}, until:'P.vx<=0'},
+       {hold:{right:1}, until:'P.x>=366'}, {jump:1,hold:{right:1}, until:'P.x>=500'}, {hold:{left:1}, until:'P.onGround'}, {hold:{left:1}, until:'P.vx<=0'},
+       {hold:{right:1}, until:'P.x>=572'}, {jump:1,hold:{right:1}, until:'false', max:900} ],
+ 14: [ {hold:{right:1}, until:'P.x>=690'}, {jump:1,hold:{right:1}, until:'P.onGround && P.x>780'}, {hold:{}, until:'L.doors[0].active', max:300}, {hold:{right:1}, until:'false', max:600} ],
+ 15: [ {hold:{right:1}, until:'P.x>=380 && P.x<400'}, {hold:{}, until:'false', max:60}, {hold:{}, until:'L.portals[3].x>700 && Math.cos(L.t*1.5)>0', max:900},
+       {hold:{right:1}, until:'P.x>=740 && P.onGround', max:300}, {hold:{right:1}, until:'P.x>=780'}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{}, until:'L.portals[4].x<875', max:600}, {hold:{left:1}, until:'false', max:40} ],
+ // flapTo: flap whenever the player sinks below that height (the bot hovers between pipes)
+ 16: [ {hold:{right:1}, flapTo:'235', until:'P.x>=280'}, {hold:{}, flapTo:'330', until:'P.y>=300', max:300}, {hold:{right:1}, flapTo:'330', until:'P.x>=430'},
+       {hold:{}, flapTo:'290', until:'false', max:33}, {hold:{right:1}, flapTo:'300', until:'P.x>=590'}, {hold:{}, flapTo:'300', until:'P.y>=270', max:200},
+       {hold:{right:1}, flapTo:'300', until:'P.x>=740'}, {hold:{right:1}, until:'P.onGround'}, {hold:{right:1}, until:'L.flag.out'},
+       {hold:{}, until:'L.doors[1].active', max:400}, {hold:{right:1}, until:'false', max:400} ],
+ // allowDeath: this level needs one death (the checkpoint respawns you on the ceiling)
+ 17: [ {hold:{right:1}, until:'P.x>=110'}, {jump:1,hold:{right:1}, until:'P.x>=200'}, {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=240'},
+       {jump:1,hold:{right:1}, until:'P.x>=335'}, {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=392'}, {jump:1,hold:{right:1}, until:'P.x>=480'},
+       {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'L.flags[0].got'}, {hold:{right:1}, allowDeath:1, until:'P.g<0 && P.onGround', max:900},
+       {hold:{right:1}, until:'P.x>=600'}, {jump:1,hold:{right:1}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=760'}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{left:1}, until:'false', max:100} ],
+ 18: [ {hold:{right:1}, until:'P.x>=150'}, {jump:1,hold:{right:1}, until:'P.x>=245'}, {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=300'},
+       {jump:1,hold:{right:1}, until:'P.x>=400'}, {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=450'}, {jump:1,hold:{right:1}, until:'P.x>=550'},
+       {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'P.x>=600'}, {jump:1,hold:{right:1}, until:'P.x>=700'}, {hold:{}, until:'P.onGround'},
+       {hold:{right:1}, until:'P.x>=750'}, {jump:1,hold:{right:1}, until:'P.x>=850'}, {hold:{}, until:'P.onGround'}, {hold:{right:1}, until:'false', max:200} ],
+ 19: [ {hold:{right:1}, until:'L.flag.w'}, {hold:{right:1}, until:'L.flag.end'}, {hold:{left:1}, until:'P.ground===L.blocks.find(b=>b.credit==="THE END")', max:900},
+       {hold:{right:1}, until:'P.x>=240'}, {hold:{}, until:'L.blocks.find(b=>b.credit==="THE END").y<=190', max:900},
+       {hold:{right:1}, until:'P.onGround && !P.ground.credit.startsWith("THE END")'}, {hold:{right:1}, until:'P.x>=340'}, {jump:1,hold:{right:1}, until:'P.onGround'},
+       {hold:{right:1}, until:'false', max:300} ],
 };
 
 
@@ -50,9 +86,11 @@ for (const [i, phases] of Object.entries(B)) {
       LL.input.left = !!ph.hold.left; LL.input.right = !!ph.hold.right;
       if (ph.jump) LL.jump();
       const cond = new Function('P', 'L', 'return (' + ph.until + ')');
+      const flap = ph.flapTo ? new Function('P', 'L', 'return (' + ph.flapTo + ')') : null;
       for (let n = 0; n < (ph.max || 1500); n++) {
+        if (flap && LL.P.vy >= 0 && LL.P.y + LL.P.h / 2 > flap(LL.P, LL.L)) LL.jump();
         LL.step(1);
-        if (LL.game.mode !== 'play') return LL.game.mode;
+        if (LL.game.mode !== 'play' && !(ph.allowDeath && LL.game.mode === 'dead')) return LL.game.mode;
         if (cond(LL.P, LL.L)) break;
       }
     }
