@@ -6,7 +6,9 @@
 
 *An ~~honest~~ platformer.*
 
-**Ten levels. Each one makes you a promise. Every single promise is a lie.**
+**~~Ten~~ Twenty levels. Each one makes you a promise. Every single promise is a lie.**
+
+> 🆕 **Update: ten new levels.** Beat level 10 and the old ending plays… then admits it lied. Levels 11–20 bring a door that fights back, gravity that flips when you jump, ice, portals, a flying level and a screen that turns upside down. Already played? Pick any unlocked level from the menu, or jump straight in with a link like [`#level-11`](https://jorgesousa.github.io/level-liar/#level-11).
 
 [![Play now](https://img.shields.io/badge/%E2%96%B6%20play%20now-jorgesousa.github.io%2Flevel--liar-FFD23F?style=for-the-badge&labelColor=0C1045)](https://jorgesousa.github.io/level-liar/)
 
@@ -28,7 +30,7 @@ LEVEL LIAR is a troll platformer that runs in your browser, on your phone or you
 <br><sub>▶ <a href="docs/media/trailer.mp4">Watch the 20-second trailer</a> (with sound). All the gameplay is the real game, played by a bot.</sub>
 </div>
 
-## The ten promises
+## The twenty promises
 
 | # | The level promises… |
 |:-:|---|
@@ -42,6 +44,17 @@ LEVEL LIAR is a troll platformer that runs in your browser, on your phone or you
 | 08 | “The exit is to the right.” |
 | 09 | “Take your time.” |
 | 10 | “Last level. Honest.” |
+| | *…it wasn't. New in the update:* |
+| 11 | “The door is the exit.” |
+| 12 | “Walls keep you in.” |
+| 13 | “Gravity is constant.” |
+| 14 | “The floor is not slippery.” |
+| 15 | “Size doesn't matter.” |
+| 16 | “Portals take you forward.” |
+| 17 | “You can't fly.” |
+| 18 | “Checkpoints save your progress.” |
+| 19 | “Up is up.” |
+| 20 | “This is the final level.” |
 
 <details>
 <summary><b>The truth</b> (spoilers, obviously)</summary>
@@ -59,6 +72,16 @@ LEVEL LIAR is a troll platformer that runs in your browser, on your phone or you
 | 08 | The exit is to the right. | Look up. |
 | 09 | Take your time. | Don't stop. |
 | 10 | Last level. Honest. | That one was actually true. |
+| 11 | The door is the exit. | The door has other plans. |
+| 12 | Walls keep you in. | There are no walls. |
+| 13 | Gravity is constant. | Jump flips it. |
+| 14 | The floor is not slippery. | Ice. Obviously. |
+| 15 | Size doesn't matter. | It does. Constantly. |
+| 16 | Portals take you forward. | Portals take you somewhere. |
+| 17 | You can't fly. | You can. You shouldn't. |
+| 18 | Checkpoints save your progress. | You have to die to win. |
+| 19 | Up is up. | Not on this screen. |
+| 20 | This is the final level. | It was. Honest. |
 
 What happens in each level, and how to beat it: [docs/LEVELS.md](docs/LEVELS.md).
 </details>
@@ -79,7 +102,7 @@ Open the link and play, nothing to install. On a computer, use the keyboard. On 
 
 ## What's in it
 
-- **The lie is the level design.** Floors that drop, spikes that pop up or slide over, a door that runs away, a ceiling that comes down, platforms that crumble, controls that swap mid-level, a saw that comes back, a fake exit, a floor that collapses behind you.
+- **The lie is the level design.** Floors that drop, spikes that pop up or slide over, a door that runs away, a ceiling that comes down, platforms that crumble, controls that swap mid-level, a saw that comes back, a fake exit, a floor that collapses behind you. And since the update: screen-wrapping walls, gravity flips, ice and conveyor belts, shrink and grow pads, portals, flapping flight, a checkpoint you have to die for, a camera that rotates, and end credits you have to climb.
 - **Fair, in its own way.** Every trap fires the same way every time. You don't get unlucky, you get educated.
 - **No tells.** Blocks are drawn without seams, so you can't spot which piece of floor is about to fall.
 - **Feels good to die.** Squash and stretch, screen shake, a burst of pixels, a red flash and a taunt every time you respawn. A level clear sweeps in with "LIE #03 EXPOSED".
@@ -107,7 +130,7 @@ Each level is a small `build($)` function in [`index.html`](index.html). The sta
 }},
 ```
 
-The building blocks: `block`, `spikes` (`sunk` to hide them in the floor, `on` to ride a moving block), `door`, `saw`, `sign`; and for the traps `when`, `after`, `every`, `tween`, `drop`, `fall`, `pop`, `appear`, `say`, `shake` and `glitch`.
+The building blocks: `block`, `spikes` (`sunk` to hide them in the floor, `on` to ride a moving block), `door`, `saw`, `sign`, `portal`, `pad`, `kill`, `credit`, `flagCP`; and for the traps `when`, `after`, `every`, `tween`, `drop`, `fall`, `pop`, `appear`, `say`, `shake`, `glitch` and `cam` (zoom, flip and rotate the camera). Level flags like `$.lv.wrapX`, `gravFlip`, `ice` and `flappy` change the physics.
 
 ## Run it
 
@@ -133,6 +156,8 @@ Level 02  bot: beaten  hold-right player: dead
 Level 03  bot: beaten  hold-right player: play
 …
 Level 10  bot: beaten  hold-right player: dead
+…
+Level 20  bot: beaten  hold-right player: dead
 ```
 
 ## Deploy
